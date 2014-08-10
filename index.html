@@ -96,10 +96,17 @@
                     <h3 class="section-subheading text-muted">September 2014 to May 2015 Semester</h3>
                 </div>
             </div>
-            <form action="https://docs.google.com/forms/d/1wO5UOaQzCwSNrRE-7FtlGkrmX31NaddrP6V16u9G7E8/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+
+            <script type="text/javascript">var registerForm=false;</script>
+            <iframe name="hidden_iframe" id="hidden_iframe"
+            style="display:none;" onload="if(registerForm)
+            {window.location='submit.html';}"></iframe>
+
+            <form action="https://docs.google.com/forms/d/1wO5UOaQzCwSNrRE-7FtlGkrmX31NaddrP6V16u9G7E8/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="registerForm=true;">
                 <div class="row">
                     
                         <div class="col-md-4">
+                                <h3 class="text-center">Student One</h3>
                                 <div class="form-group">
                                     <label for="entry_1968379253">First Name</label>
                                     <input class="form-control" type="text" name="entry.1968379253" value="" id="entry_1968379253" dir="auto" aria-label="First Name  " title="">    
@@ -122,24 +129,48 @@
                         </div>
 
                         <div class="col-md-4">
+                                <h3 class="text-center">Student Two</h3>
                                 <div class="form-group">
-                                    <label for="entry_1968379253">First Name</label>
-                                    <input class="form-control" type="text" name="entry.1968379253" value="" id="entry_1968379253" dir="auto" aria-label="First Name  " title="">    
+                                    <label for="entry_1519429038">First Name</label>
+                                    <input type="text" name="entry.1519429038" value="" class="form-control" id="entry_1519429038" dir="auto" aria-label="First Name  " title="">  
                                 </div> 
                                 
                                 <div class="form-group">
-                                    <label for="entry_1501575292">Last Name</label>
-                                    <input class="form-control" type="text" name="entry.1501575292" value="" id="entry_1501575292" dir="auto" aria-label="Last Name  " title="">    
+                                    <label for="entry_707682000">Last Name</label>
+                                    <input type="text" name="entry.707682000" value="" class="form-control" id="entry_707682000" dir="auto" aria-label="Last Name  " title="">   
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label for="entry_631619408">Date of Birth</label>
-                                    <input class="form-control" type="date" name="entry.631619408" value="" dir="auto" id="entry_631619408" aria-label="Date of Birth  ">    
+                                    <label for="entry_2013269233">Date of Birth</label>
+                                    <input type="date" name="entry.2013269233" value="" class="form-control" dir="auto" id="entry_2013269233" aria-label="Date of Birth  "> 
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="entry_1741712852">Allergies</label>
-                                    <input class="form-control" type="text" name="entry.1741712852" value="" id="entry_1741712852" dir="auto" aria-label="Allergies  " title="">    
+                                    <label for="entry_1979727170">Allergies</label>
+                                    <input type="text" name="entry.1979727170" value="" class="form-control" id="entry_1979727170" dir="auto" aria-label="Allergies  " title="">
+                                </div>
+                        </div>
+
+                        <div class="col-md-4">
+                                <h3 class="text-center">Student Three</h3>
+                                <div class="form-group">
+                                    <label for="entry_1598636572">First Name</label>
+                                    <input type="text" name="entry.1598636572" value="" class="form-control" id="entry_1598636572" dir="auto" aria-label="First Name  " title="">
+                                </div> 
+                                
+                                <div class="form-group">
+                                    <label for="entry_704395492">Last Name</label>
+                                    <input type="text" name="entry.704395492" value="" class="form-control" id="entry_704395492" dir="auto" aria-label="Last Name  " title="">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="entry_259860323">Date of Birth</label>
+                                    <input type="date" name="entry.259860323" value="" class="form-control" dir="auto" id="entry_259860323" aria-label="Date of Birth  ">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="entry_1387858479">Allergies</label>
+                                    <input type="text" name="entry.1387858479" value="" class="form-control" id="entry_1387858479" dir="auto" aria-label="Allergies  " title="">
                                 </div>
                         </div>
                     
@@ -180,6 +211,31 @@
                     </div>
                     <div class="col-md-6">
                         <h3 class="text-center">Mother</h3>
+
+                        <div class="form-group">
+                            <label for="entry_167723768">First Name</label>
+                            <input class="form-control" type="text" name="entry.167723768" value="" id="entry_167723768" dir="auto" aria-label="First Name  " title="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="entry_68896569">Last Name</label>
+                            <input class="form-control" type="text" name="entry.68896569" value="" id="entry_68896569" dir="auto" aria-label="Last Name  " title="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="entry_2072874697">Home Phone</label>
+                            <input class="form-control" type="text" name="entry.2072874697" value="" id="entry_2072874697" dir="auto" aria-label="Home Phone  " title="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="entry_2108243750">Cell Phone</label>
+                            <input type="text" name="entry.2108243750" value="" class="form-control" id="entry_2108243750" dir="auto" aria-label="Cell Phone  " title="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="entry_938995797">E-mail</label>
+                            <input type="text" name="entry.938995797" value="" class="form-control" id="entry_938995797" dir="auto" aria-label="E-mail  " title="">
+                        </div>
                     </div>
                 </div>
 
