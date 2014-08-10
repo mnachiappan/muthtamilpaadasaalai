@@ -1,0 +1,80 @@
+<!doctype html>
+<html ng-app="Demo">
+<head>
+    <meta charset="utf-8" />
+ 
+    <title>
+        Posting Form Data With $http In AngularJS
+    </title>
+</head>
+<body ng-controller="DemoController">
+ 
+    <h1>
+        Posting Form Data With $http In AngularJS
+    </h1>
+ 
+    <a href="" ng-click="sendData()">send data</a>
+ 
+    <div>
+        
+        <form action="https://docs.google.com/forms/d/1rGQJ29-_rHOhqrxtVtmDo_t4VSPEHjpvwBkpPASQljk/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
+        <div class="ss-form-question errorbox-good" role="listitem">
+        <div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry">
+        <label class="ss-q-item-label" for="entry_544317384"><div class="ss-q-title">json
+        </div>
+        <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+        </div></div></div>
+        <textarea type="hidden" name="entry.544317384" id="entry_544317384" dir="auto" aria-label="json  " ng-model="hackText">
+        <input type="hidden" name="draftResponse" value="[,,&quot;-355869124918621966&quot;]
+        ">
+        <input type="hidden" name="pageHistory" value="0">
+
+
+        <input type="hidden" name="fbzx" value="-355869124918621966">
+
+        <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+        <input type="submit" name="submit" value="Submit" id="ss-submit">
+        <div class="ss-password-warning ss-secondary-text">Never submit passwords through Google Forms.</div></td>
+        </tr></tbody></table></div></ol></form>
+
+    </div>
+
+ 
+</body>
+
+<!-- Initialize scripts. -->
+    <script type="text/javascript" src="https://code.angularjs.org/1.2.9/angular.js"></script>
+    <script type="text/javascript">
+ 
+        // Define the module for our AngularJS application.
+        var app = angular.module( "Demo", [] );
+ 
+ 
+        // -------------------------------------------------- //
+        // -------------------------------------------------- //
+ 
+ 
+        // I control the main demo.
+        app.controller(
+            "DemoController",
+            function( $scope, $http) {
+                $scope.hackText = "[{'hi': 'ygfdfdsfso you think you can run'}]";
+                $scope.sendData = function(){
+                    console.log("sending data");
+                    var postData = {'entry.544317384': 'this is data sent from angular',
+                    'draftResponse': "[,,&quot;-355869124918621966&quot;]",
+                    'pageHistory': '0', 
+                    'fbzx': "-355869124918621966"};
+                    $http.post('https://docs.google.com/forms/d/1rGQJ29-_rHOhqrxtVtmDo_t4VSPEHjpvwBkpPASQljk/formResponse', postData)
+                    .success(function (data, status, headers, config) {
+                        console.log('success');
+                    }).error(function (data, status, headers, config) {
+                        console.log('failure');
+                    });
+                };
+ 
+        });
+
+ 
+    </script>
+</html>
